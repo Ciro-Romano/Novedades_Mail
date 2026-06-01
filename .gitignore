@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+venv/
+
+config/mail.json
+config/destinatarios.json
+
+data/alertas.json
+data/enviados.json
+
+boletin.html
+
+.vscode/

@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: #eef3f8;
+
+    color: #1e293b;
+
+    padding: 40px;
+
+}
+
+.contenedor {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #163a63,
+            #24558f
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 40px;
+
+    border-radius: 24px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(
+            22,
+            58,
+            99,
+            .20
+        );
+}
+.fecha-grande {
+
+    margin: 0;
+}
+
+.dia-semana {
+
+    font-size: 52px;
+
+    font-weight: 900;
+
+    letter-spacing: 14px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.fecha-principal {
+
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+
+    opacity: .90;
+}
+
+/* ==========================================
+   TITULO PRINCIPAL
+========================================== */
+
+.intro-boletin {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+    box-shadow:
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            .05
+        );
+}
+
+.intro-contenido {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.intro-boletin h1 {
+
+    color: #163a63;
+
+    font-size: 64px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.intro-boletin p {
+
+    color: #64748b;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+.seccion {
+
+    margin-bottom: 60px;
+}
+
+.seccion > h2 {
+
+    display: inline-block;
+
+    background:
+        linear-gradient(
+            135deg,
+            #163a63,
+            #24558f
+        );
+
+    color: white;
+
+    padding:
+        12px
+        22px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   DESTACADAS
+========================================== */
+
+.bloque-destacadas {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.destacada {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d35e,
+            #f7e08a
+        );
+
+    color: #163a63;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(
+            244,
+            211,
+            94,
+            .25
+        );
+}
+
+.destacada-etiqueta {
+
+    display: inline-block;
+
+    background:
+        rgba(
+            22,
+            58,
+            99,
+            .10
+        );
+
+    color: #163a63;
+
+    padding:
+        8px
+        14px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.destacada h2 {
+
+    color: #163a63;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.destacada p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.fuente-destacada {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.boton-destacada {
+
+    display: inline-block;
+
+    background: #163a63;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding:
+        12px
+        20px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.boton-destacada:hover {
+
+    background: #24558f;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 24px;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    border:
+        1px solid #dbe3ee;
+
+    min-height: 220px;
+
+    transition: .2s;
+
+    position: relative;
+}
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #163a63,
+            #4f8dd8
+        );
+}
+
+.card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(
+            0,
+            0,
+            0,
+            .08
+        );
+}
+
+.fuente {
+
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #163a63;
+
+    padding:
+        6px
+        10px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+}
+
+.card h3 {
+
+    color: #163a63;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    line-height: 1.3;
+}
+
+.card p {
+
+    color: #64748b;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.card a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.card a:hover {
+
+    text-decoration: underline;
+}
+
+/* ==========================================
+   FUENTES CONSULTADAS
+========================================== */
+
+.fuentes-grid {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 700px;
+}
+
+.fuentes-grid a {
+
+    background: white;
+
+    color: #163a63;
+
+    text-decoration: none;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #dbe3ee;
+
+    text-align: center;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.fuentes-grid a:hover {
+
+    background: #163a63;
+
+    color: white;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+
+    margin-top: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+
+    border-radius: 20px;
+}
+
+.footer h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+}
+
+.footer p {
+
+    opacity: .85;
+
+    line-height: 1.8;
+
+    max-width: 900px;
+
+    margin:
+        0 auto
+        15px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+
+        padding: 20px;
+    }
+
+    .grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .dia-semana {
+
+        font-size: 32px;
+
+        letter-spacing: 8px;
+    }
+
+    .fecha-principal {
+
+        font-size: 18px;
+    }
+
+    .intro-boletin h1 {
+
+        font-size: 42px;
+    }
+
+    .destacada h2 {
+
+        font-size: 28px;
+    }
+}
+
+.recordatorios {
+    background: #f6f1ff;
+    border-left: 4px solid #b9a7ff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.novedad-recordatorio {
+    opacity: 0.92;
+}
+
+/* ==========================================
+   NOVEDADES GENERADAS POR PYTHON
+========================================== */
+
+.novedad-critica,
+.novedad-importante,
+.novedad-normal,
+.novedad-recordatorio {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #dbe3ee;
+
+    box-shadow:
+        0 4px 12px rgba(
+            0,
+            0,
+            0,
+            .05
+        );
+
+    position: relative;
+}
+
+.novedad-critica {
+
+    border-left: 6px solid #dc2626;
+}
+
+.novedad-importante {
+
+    border-left: 6px solid #f59e0b;
+}
+
+.novedad-normal {
+
+    border-left: 6px solid #2563eb;
+}
+
+.novedad-recordatorio {
+
+    border-left: 6px solid #8b5cf6;
+
+    background: #faf7ff;
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        6px
+        12px;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 15px;
+}
+
+.badge-critica {
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+.badge-importante {
+
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.badge-normal {
+
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+.badge-recordatorio {
+
+    background: #ede9fe;
+
+    color: #6d28d9;
+}
+
+.titulo {
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    color: #163a63;
+
+    margin-bottom: 15px;
+
+    line-height: 1.25;
+}
+
+.meta {
+
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-bottom: 15px;
+}
+
+.resumen {
+
+    color: #334155;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+.btn-leer {
+
+    display: inline;
+
+    background: transparent;
+
+    color: #2563eb !important;
+
+    text-decoration: underline;
+
+    font-weight: 600;
+
+    padding: 0;
+
+    border: none;
+}
+
+.btn-leer:hover {
+
+    color: #1d4ed8 !important;
+
+    background: transparent;
+}
+
+.lista-fuentes {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px 35px;
+
+    border: 1px solid #dbe3ee;
+
+    line-height: 2;
+}
+
+.lista-fuentes li {
+
+    color: #163a63;
+
+    font-weight: 600;
+}
+
+.lista-fuentes a {
+
+    color: #2563eb;
+
+    text-decoration: underline;
+}
+
+.lista-fuentes a:hover {
+
+    color: #1d4ed8;
+}
+
+.novedad-vacia {
+
+    background: white;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+}
+
+.novedad-vacia .titulo {
+
+    color: #64748b;
+
+    font-weight: 600;
+}

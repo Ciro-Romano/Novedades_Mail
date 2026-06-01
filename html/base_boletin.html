@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Boletín de Novedades</title>
+
+    <link rel="stylesheet" href="static/estilos.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<header class="header">
+
+        <h1>
+            BOLETÍN DE NOVEDADES
+        </h1>
+
+        <p>
+            Resumen semanal de novedades tributarias,
+            laborales, de seguridad social y normativas oficiales.
+        </p>
+
+        <div class="fecha-principal">
+            {{ FECHA_BOLETIN }}
+        </div>
+
+</header>
+
+    <!-- DESTACADAS -->
+
+    <section class="seccion">
+
+        <h2>Novedades Destacadas</h2>
+
+        {{ DESTACADAS }}
+
+    </section>
+
+    <!-- TRIBUTARIO -->
+
+    <section class="seccion">
+
+        <h2>Tributario</h2>
+
+        {{ TRIBUTARIO }}
+
+    </section>
+
+    <!-- LABORAL -->
+
+    <section class="seccion">
+
+        <h2>Laboral</h2>
+
+        {{ LABORAL }}
+
+    </section>
+
+    <!-- SEGURIDAD SOCIAL -->
+
+    <section class="seccion">
+
+        <h2>Seguridad Social</h2>
+
+        {{ SEGURIDAD_SOCIAL }}
+
+    </section>
+
+    <!-- NORMATIVA -->
+
+    <section class="seccion">
+
+        <h2>Normativa Oficial</h2>
+
+        {{ NORMATIVA }}
+
+    </section>
+
+    <!-- RECORDATORIOS -->
+
+    <section class="seccion recordatorios">
+
+        <h2>Recordatorios</h2>
+
+        {{ RECORDATORIOS }}
+
+    </section>
+
+    <!-- FUENTES -->
+
+    <section class="seccion">
+
+        <h2>Fuentes Consultadas</h2>
+
+        <ul class="lista-fuentes">
+
+            {{ FUENTES }}
+
+        </ul>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h3>{{ ESTUDIO_NOMBRE }}</h3>
+
+        <p>
+            Boletín generado automáticamente a partir de fuentes oficiales y medios especializados.
+        </p>
+
+        <p>
+            La información contenida en este informe posee carácter informativo y debe ser corroborada con las fuentes oficiales correspondientes.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>

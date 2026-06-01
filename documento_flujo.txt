@@ -1,0 +1,13 @@
+scripts/enviar_boletin.py
+↓
+main.py
+↓
+genera boletin.html
+↓
+inyecta CSS
+↓
+mailer.py
+↓
+SMTP Google
+↓
+destinatarios
