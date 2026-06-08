@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime
 
 
-ARCHIVO = Path("data/enviados.json")
+ARCHIVO = Path("tests/enviados_prueba.json")
 
 
 def cargar_enviados():
@@ -104,13 +104,13 @@ def registrar_envio(novedades):
 
         })
 
-    historial.append(
-        boletin
-    )
+        historial.append(
+            boletin
+        )
 
-    guardar_enviados(
-        historial
-    )
+        guardar_enviados(
+            historial
+        )
 
 
 def obtener_semana_anterior():

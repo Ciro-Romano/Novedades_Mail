@@ -3,6 +3,8 @@ import smtplib
 
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 
 from pathlib import Path
 
@@ -37,7 +39,8 @@ def cargar_destinatarios():
 def enviar_html(
     asunto,
     html,
-    grupo="boletin"
+    grupo="boletin",
+    adjuntos=None
 ):
 
     config = cargar_config()
@@ -69,6 +72,39 @@ def enviar_html(
 
     )
 
+    if adjuntos:
+
+        for archivo in adjuntos:
+
+            ruta = Path(archivo)
+
+            if not ruta.exists():
+                continue
+
+            with open(ruta, "rb") as f:
+
+                parte = MIMEBase(
+                    "application",
+                    "octet-stream"
+                )
+
+                parte.set_payload(
+                    f.read()
+                )
+
+            encoders.encode_base64(
+                parte
+            )
+
+            parte.add_header(
+                "Content-Disposition",
+                f'attachment; filename="{ruta.name}"'
+            )
+
+            mensaje.attach(
+                parte
+            )
+
     with smtplib.SMTP_SSL(
         "smtp.gmail.com",
         465
@@ -77,6 +113,10 @@ def enviar_html(
         servidor.login(
             remitente,
             password
+        )
+
+        print(
+            f"DESTINATARIOS: {lista_destinatarios}"
         )
 
         servidor.sendmail(

@@ -138,7 +138,7 @@ def renderizar_novedad(
 
 def generar_html(
     nuevas,
-    recordatorios
+    semana_anterior
 ):
 
     hoy = datetime.now()
@@ -203,25 +203,30 @@ def generar_html(
     def render(lista):
 
         if not lista:
-
-            return """
-            <div class="novedad-vacia">
-
-                <span class="badge badge-normal">
-                    SIN NOVEDADES
-                </span>
-
-                <div class="titulo">
-                    No se encontraron novedades para esta categoría
-                </div>
-
-            </div>
-            """
+            return ""
 
         return "".join(
             renderizar_novedad(x)
             for x in lista
         )
+    
+    def render_seccion(
+        titulo,
+        novedades
+    ):
+
+        if not novedades:
+            return ""
+
+        return f"""
+        <section class="seccion">
+
+            <h2>{titulo}</h2>
+
+            {render(novedades)}
+
+        </section>
+        """
 
     FUENTES_FIJAS = [
 
@@ -267,22 +272,22 @@ def generar_html(
         </li>
         """
 
-    if recordatorios:
+    if semana_anterior:
 
-        recordatorios_html = "".join(
+        semana_anterior_html = "".join(
 
             renderizar_novedad(
                 x,
                 recordatorio=True
             )
 
-            for x in recordatorios
+            for x in semana_anterior
 
         )
 
     else:
 
-        recordatorios_html = """
+        semana_anterior_html = """
         <div class="novedad-recordatorio">
 
             <span class="badge badge-recordatorio">
@@ -290,11 +295,7 @@ def generar_html(
             </span>
 
             <div class="titulo">
-                No se registran recordatorios esta semana
-            </div>
-
-            <div class="meta">
-                Todas las publicaciones incluidas corresponden a novedades nuevas.
+                No existe un boletín anterior
             </div>
 
         </div>
@@ -312,27 +313,31 @@ def generar_html(
             render(destacadas),
 
         "TRIBUTARIO":
-            render(
+            render_seccion(
+                "Tributario",
                 categorias["Tributario"]
             ),
 
         "LABORAL":
-            render(
+            render_seccion(
+                "laboral",
                 categorias["Laboral"]
             ),
 
         "SEGURIDAD_SOCIAL":
-            render(
-                categorias[
-                    "Seguridad Social"
-                ]
+            render_seccion(
+                "Seguridad Social",
+                categorias["Seguridad Social"]
             ),
 
         "NORMATIVA":
-            render(normativas),
+            render_seccion(
+                "Normativa Oficial",
+                normativas
+            ),
 
-        "RECORDATORIOS":
-            recordatorios_html,
+        "SEMANA_ANTERIOR":
+            semana_anterior_html,
 
         "FUENTES":
             fuentes_html

@@ -1,0 +1,92 @@
+[
+    {
+        "fecha_boletin": "2026-06-01",
+        "novedades": [
+            {
+                "titulo": "Se prorrogan a julio los vencimientos de Ganancias, Bienes Personales e Impuesto Cedular",
+                "fuente": "CPCECABA",
+                "score": 110
+            },
+            {
+                "titulo": "Modernización laboral: ARCA agiliza el procedimiento para generar el certificado de aportes y haberes",
+                "fuente": "ARCA",
+                "score": 40
+            },
+            {
+                "titulo": "Junio 2026: Aportes y Contribuciones – Base Imponible Máxima y Mínima (Actualización)",
+                "fuente": "IGNACIO ONLINE",
+                "score": 40
+            },
+            {
+                "titulo": "Montos Asignaciones Familiares Junio 2026 ANSeS",
+                "fuente": "IGNACIO ONLINE",
+                "score": 35
+            },
+            {
+                "titulo": "Decreto 408/2026 - Reglamentación del Fondo de Asistencia Laboral - Ley N° 27.802.",
+                "fuente": "JORGE VEGA",
+                "score": 30
+            },
+            {
+                "titulo": "Decreto 407/2026 - Se reglamentan múltiples artículos de la Ley de Modernización Laboral",
+                "fuente": "JORGE VEGA",
+                "score": 30
+            },
+            {
+                "titulo": "UECARA: nuevos básicos para Junio, Julio y Agosto de 2026 + Sumas No Remunerativas (ACUERDO + ESCALAS)",
+                "fuente": "JORGE VEGA",
+                "score": 30
+            },
+            {
+                "titulo": "ARCA reglamentó el procedimiento para adherirse al RIMI",
+                "fuente": "ARCA",
+                "score": 25
+            },
+            {
+                "titulo": "Resolución General 5853/2026",
+                "fuente": "BOLETIN_NACION",
+                "score": 25
+            },
+            {
+                "titulo": "ARCA postergó la nueva facturación electrónica: el CAEA como modalidad de excepción recién desde agosto 2026",
+                "fuente": "IGNACIO ONLINE",
+                "score": 20
+            },
+            {
+                "titulo": "Jubilaciones y bases imponibles: actualización - Junio 2026",
+                "fuente": "JORGE VEGA",
+                "score": 20
+            },
+            {
+                "titulo": "Riesgos del Trabajo - La Cuota Fija aumenta a $ 1.765 en Mayo 2026 (vencimiento Junio)",
+                "fuente": "JORGE VEGA",
+                "score": 20
+            },
+            {
+                "titulo": "Decreto 410/2026",
+                "fuente": "BOLETIN_NACION",
+                "score": 15
+            },
+            {
+                "titulo": "Decreto 409/26 - Régimen de Promoción del Empleo Registrado (PER)",
+                "fuente": "JORGE VEGA",
+                "score": 15
+            }
+        ]
+    },
+    {
+        "fecha_boletin": "2026-06-08",
+        "novedades": [
+            {
+                "titulo": "ANSeS: Montos Asignaciones familiares - JUNIO 2026",
+                "fuente": "JORGE VEGA",
+                "score": 35
+            },
+            {
+                "titulo": "Excel - Recibo de Sueldo Decreto 407/26 - Primera Versión (Ley de Modernización Laboral Nº 27.802)",
+                "fuente": "JORGE VEGA",
+                "score": 30
+            }
+        ]
+    }
+]

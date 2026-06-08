@@ -1,3 +1,12 @@
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent.parent
+
+sys.path.append(
+    str(ROOT)
+)
+
 from fuente.arca import obtener_novedades as obtener_arca
 from fuente.cpcecaba import obtener_novedades as obtener_cpcecaba
 from fuente.boletin_caba import obtener_novedades as obtener_boletin_caba
@@ -15,7 +24,7 @@ from utils.scoring import (
     calcular_score
 )
 
-from utils.historial import (
+from tests.historial_prueba import (
     fue_enviada,
     registrar_envio,
     obtener_semana_anterior
@@ -170,7 +179,7 @@ if __name__ == "__main__":
     mostrar_top_novedades(novedades)
 
     html = generar_html(
-        nuevas, 
+        nuevas,
         semana_anterior
     )
 
@@ -180,7 +189,7 @@ if __name__ == "__main__":
     print("\n[OK] boletin.html generado")
 
     carpeta_historial = Path(
-        "data/boletines"
+        "tests/boletines_prueba"
     )
 
     carpeta_historial.mkdir(
@@ -211,20 +220,22 @@ if __name__ == "__main__":
     
     if nuevas:
 
-        if not MODO_PRUEBA:
+        registrar_envio(nuevas)
 
-            registrar_envio(nuevas)
+        if MODO_PRUEBA:
 
             print(
-                f"[OK] Registradas {len(nuevas)} novedades"
+                f"[PRUEBA] Registradas {len(nuevas)} novedades en enviados_prueba.json"
             )
 
         else:
 
             print(
-                "[PRUEBA] No se actualizó enviados.json"
+                f"[OK] Registradas {len(nuevas)} novedades"
             )
 
     else:
 
-        print("[INFO] No hay novedades nuevas")
+        print(
+            "[INFO] No hay novedades nuevas"
+        )

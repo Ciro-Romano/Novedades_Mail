@@ -1,8 +1,17 @@
 from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent.parent
+
+sys.path.append(
+    str(ROOT)
+)
+
+from pathlib import Path
 import subprocess
 import sys
 
-from mailer import enviar_html
+from scripts.mailer import enviar_html
 
 
 ROOT = Path(__file__).parent.parent
@@ -11,7 +20,7 @@ ROOT = Path(__file__).parent.parent
 def generar_boletin():
 
     subprocess.run(
-        [sys.executable, str(ROOT / "main.py")],
+        [sys.executable, str(ROOT / "tests" / "test_main.py")],
         check=True
     )
 
@@ -43,7 +52,7 @@ def leer_html():
 
 def obtener_boletin_anterior():
 
-    carpeta = ROOT / "data" / "boletines"
+    carpeta = ROOT / "tests" / "boletines_prueba"
 
     if not carpeta.exists():
         return None
@@ -86,6 +95,7 @@ if __name__ == "__main__":
     enviar_html(
         asunto="Boletín de Novedades",
         html=html,
+        grupo="pruebas",
         adjuntos=adjuntos
     )
 
