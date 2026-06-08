@@ -41,24 +41,6 @@ def leer_html():
 
     return html
 
-def obtener_boletin_anterior():
-
-    carpeta = ROOT / "data" / "boletines"
-
-    if not carpeta.exists():
-        return None
-
-    archivos = sorted(
-        carpeta.glob("*.html")
-    )
-
-    if len(archivos) < 2:
-        return None
-
-    return str(
-        archivos[-2]
-    )
-
 if __name__ == "__main__":
 
     print("Generando boletín...")
@@ -71,22 +53,11 @@ if __name__ == "__main__":
 
     print("Enviando correo...")
 
-    boletin_anterior = (
-        obtener_boletin_anterior()
-    )
-
-    adjuntos = []
-
-    if boletin_anterior:
-
-        adjuntos.append(
-            boletin_anterior
-        )
-
     enviar_html(
         asunto="Boletín de Novedades",
         html=html,
-        adjuntos=adjuntos
+        grupo="boletin"
     )
 
     print("Proceso finalizado.")
+
